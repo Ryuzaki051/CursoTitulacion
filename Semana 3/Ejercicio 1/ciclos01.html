@@ -1,0 +1,42 @@
+<!Doctype html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ciclos01</title>
+		<script type="text/javascript">
+			
+			function inicio(){
+				var c1=document.getElementById("caja");
+				var c2=document.getElementById("caja2");
+				
+				var n=1;
+
+				while(n<=10){
+					if(n!=10){
+					c1.innerHTML+="a";
+					}else{
+						c1.innerHTML+="!";
+					}
+					n++;
+				}
+				c2.innerHTML+=", Buenos Días";
+
+			}
+		</script>
+	</head>
+	<body>
+		<div id="caja">
+			Hola
+		</div>
+
+		<div id="caja2">
+			¿Como te va?
+		</div>
+
+		<script type="text/javascript">
+			inicio();
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ciclos02</title>
+		<script type="text/javascript">
+			
+			function inicio(){
+				var c1=document.getElementById("caja");
+				
+				var n=0;
+
+				while(n<=50){
+					if(n%2){
+						c1.innerHTML+=n+" ";
+					}
+					n++;
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<div id="caja">
+		</div>
+
+		<script type="text/javascript">
+			inicio();
+		</script>
+
+	</body>
+</html>

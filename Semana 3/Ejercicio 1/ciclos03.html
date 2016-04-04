@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ciclos03</title>
+		<script type="text/javascript">
+		function calcular(){
+			var n=Number(numero.value);
+			var num=0,residuo,par;
+
+			caja.innerHTML="";
+			caja2.innerHTML="";
+			while(num<=n){
+				residuo=num%2;
+					if(residuo==1){
+						caja.innerHTML+="<strong> "+num+"</strong>";
+					}else if(residuo%2==0){
+						caja2.innerHTML+="<em><b> "+num+"</b></em>";
+					}
+					num++;
+			}
+		}
+			
+			function inicio(){
+				numero=document.getElementById("numero");
+				boton=document.getElementById("primos");
+				caja=document.getElementById("caja");
+				caja2=document.getElementById("caja2");
+				boton.addEventListener("click",calcular);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="numero">
+		<input type="button" id="primos" value="Ver numeros">
+		<div>Numeros Primos:</div>
+		<div id="caja">
+		</div>
+		<br/>
+		<div>Numeros Pares:</div>
+		<div id="caja2">
+		</div>
+
+		<script type="text/javascript">
+			inicio();
+		</script>
+
+	</body>
+</html>

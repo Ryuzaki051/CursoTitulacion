@@ -1,0 +1,54 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Ciclos Factorial</title>
+		<script type="text/javascript">
+		function calcular(){
+			var n=Number(numero.value);
+			var resultado=1,sec=n;
+
+			cajar.innerHTML="";
+			cajas.innerHTML="";
+			//cajas.innerHTML="";
+			
+			for(var i=1;i<=n;i++){
+				resultado*=i;
+			}
+			for(var i=1;i<=n;i++){
+				for(var o=1;o<=n;o++){
+					if(o<=n){
+						cajas.innerHTML+=" "+n--+"x";
+					}
+				}
+			}
+			cajar.innerHTML+=" "+resultado;
+
+		}
+			
+			function inicio(){
+				numero=document.getElementById("numero");
+				boton=document.getElementById("factorial");
+				cajar=document.getElementById("resultado");
+				cajas=document.getElementById("secuencia");
+				boton.addEventListener("click",calcular);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="numero">
+		<input type="button" id="factorial" value="Obtener resultado">
+		<div>Resultado:</div>
+		<div id="resultado">
+		</div>
+		<br/>
+		<div>Secuencia:</div>
+		<div id="secuencia">
+		</div>
+
+		<script type="text/javascript">
+			inicio();
+		</script>
+
+	</body>
+</html>
